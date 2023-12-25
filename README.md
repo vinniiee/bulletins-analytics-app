@@ -65,7 +65,7 @@ The development server can be started with:
 npm run dev
 ```
 
-##### Linting
+#### Linting
 
 Linting is configured using ESLint. Run the following command to lint the code:
 
