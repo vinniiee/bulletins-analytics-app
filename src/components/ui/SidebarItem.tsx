@@ -28,7 +28,7 @@ function SidebarItem(props: SidebarItemProps) {
       style={{ transition: "color .0s" }}
     >
       <div className="" style={{ transition: "fill .0s" }}>
-        {icon(` ${toggle ? "scale-100" : "scale-150"} duration-200`)}
+        {icon(` ${toggle ? "scale-100" : "scale-150"} duration-500`)}
       </div>
 
       <div
