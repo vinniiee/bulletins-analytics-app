@@ -2,7 +2,7 @@ import axios, { AxiosInstance, AxiosResponse } from "axios";
 import { Resources } from "../enums/resources";
 import { BarChartItem } from "../components/PestleChart";
 
-// const apiUrl = import.meta.env.VITE_API_URL ;
+const apiUrl = import.meta.env.VITE_API_URL ;
 export type Resource ={
   name:string,
   count:number
@@ -35,7 +35,7 @@ export type ChronicData = {
   items:Bulletin[]
 }
 
-const apiUrl = "http://localhost:3000";
+// const apiUrl = "http://localhost:3000";
 
 const bulletinsApi: AxiosInstance = axios.create({
   baseURL: "" + apiUrl + "/bulletins",
