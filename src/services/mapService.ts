@@ -13,10 +13,14 @@ const mapApi = axios.create({
 });
 
 export const getMapFeatures = async () => {
-  const response = await mapApi.get("");
+  try{
+    const response = await mapApi.get("");
   console.log("response", response);
 
 //   const { countries } = response.data.objects;
   const features = response.data.features as unknown as Feature[];
   return features;
+  }catch(e){
+    console.log(e)
+  }
 };
