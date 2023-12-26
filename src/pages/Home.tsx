@@ -41,7 +41,7 @@ function Home() {
       flex p-2 flex-col justify-around items-start shadow-lg"
       >
         <h5 className="text-white text-xl ml-2 ">Countries</h5>
-        <CountriesChart> </CountriesChart>
+        <CountriesChart />
       </div>
     </div>
   );

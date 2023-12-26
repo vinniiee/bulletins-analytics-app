@@ -6,8 +6,13 @@ import BarCharts from "./pages/BarCharts";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import ScatterPlotsLog from "./pages/ScatterPlotsLog";
 import GeospatialGraphs from "./pages/GeospatialGraphs";
+import { toast } from "react-toastify";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(()=>{
+    toast.info("Backend is deployed on Render. May take a while to start up server.");
+  },[])
   const router = createBrowserRouter([
     {
       element: <AppLayout />,
