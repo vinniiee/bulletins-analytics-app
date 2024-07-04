@@ -1,12 +1,12 @@
 import axios, { AxiosInstance, AxiosResponse } from "axios";
 import { Resources } from "../enums/resources";
 import { BarChartItem } from "../components/PestleChart";
+// import { apiUrl } from "./apiUrl";
 
-const apiUrl = import.meta.env.VITE_API_URL ;
-export type Resource ={
-  name:string,
-  count:number
-}
+export type Resource = {
+  name: string;
+  count: number;
+};
 
 export type Bulletin = {
   _id: string;
@@ -31,16 +31,14 @@ export type Bulletin = {
 };
 
 export type ChronicData = {
-  date:Date,
-  items:Bulletin[]
-}
-
-// const apiUrl = "http://localhost:3000";
+  date: Date;
+  items: Bulletin[];
+};
 
 const bulletinsApi: AxiosInstance = axios.create({
-  baseURL: "" + apiUrl + "/bulletins",
+  baseURL: "/bulletins",
   headers: {
-    Accept: 'application/json',
+    Accept: "application/json",
   },
 });
 
@@ -55,12 +53,12 @@ export const getBulletins = async (): Promise<Bulletin[] | undefined> => {
   }
 };
 
-
-export const getBulletinsByDate = async (): Promise<ChronicData[] | undefined> => {
+export const getBulletinsByDate = async (): Promise<
+  ChronicData[] | undefined
+> => {
   try {
-    const response: AxiosResponse<ChronicData[], unknown> = await bulletinsApi.get(
-      "chronic"
-    );
+    const response: AxiosResponse<ChronicData[], unknown> =
+      await bulletinsApi.get("chronic");
     return response.data;
   } catch (e) {
     console.log(e);
@@ -78,15 +76,15 @@ export const getSectors = async () => {
 
 export const getResources = async (resource: Resources) => {
   try {
-    console.log("Resource:",resource);
-    const response: AxiosResponse<BarChartItem[], unknown> = await bulletinsApi.get(`/${resource}`);
-    console.log("Response",response);
+    console.log("Resource:", resource);
+    const response: AxiosResponse<BarChartItem[], unknown> =
+      await bulletinsApi.get(`/${resource}`);
+    console.log("Response", response);
     return response.data;
   } catch (e) {
     console.log(e);
   }
 };
-
 
 export const getTopics = async () => {
   try {

@@ -28,11 +28,11 @@ function SidebarItem(props: SidebarItemProps) {
       style={{ transition: "color .0s" }}
     >
       <div className="" style={{ transition: "fill .0s" }}>
-        {icon(` ${toggle ? "scale-100" : "scale-150"} duration-500`)}
+        {icon(` ${toggle ? "scale-100" : "scale-150"} duration-200`)}
       </div>
 
       <div
-        className={` ${
+        className={`w-full ${
           toggle ? " w-full" : "  w-0"
         } duration-200 overflow-hidden`}
       >
