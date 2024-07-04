@@ -2,7 +2,7 @@
 
 Bulletin Analytics is a powerful application designed to fetch, analyze, and visualize bulletin data. The project is built using a modern tech stack featuring React, D3, and Vite for the frontend, along with Express, MongoDB, and Mongoose for the backend.
 
-Deployed On :- [Render](https://bulletin-analytics.onrender.com/)
+Deployed On :- [Render](https://bulletins-analytics.onrender.com/)
 
 
 ## Table of Contents
